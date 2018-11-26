@@ -4,9 +4,9 @@
 #include<conio.h>
 #include<time.h>
 using namespace std;
-char direction_a,direction_b;			//方向a、b,用于方向的限制 
+char direction_a,direction_b;			                //方向a、b,用于方向的限制 
 int scores,num,fool_x,fool_y,speed=100;	//得分、num用于蛇身起步、食物x坐标、食物y坐标 
-bool end;								//结束标记 
+bool end;						        //结束标记 
 struct node 							//蛇身结点 
 {
 	int x,y;
@@ -16,7 +16,7 @@ struct node 							//蛇身结点
 void init();							//初始化开始界面 
 void start();							//游戏开始入场 
 void init_snake();						//初始化蛇身 
-void delete_snake();					//删除蛇身 
+void delete_snake();					        //删除蛇身 
 void control();							//方向控制 
 void move();							//蛇身移动 
 void limit();							//方向限制
@@ -57,9 +57,9 @@ int main ()
 			control();
 			fool();
 			Sleep(speed);
-			if(kbhit())					//kbhit 非阻塞函数 
+			if(kbhit())	                      //kbhit 非阻塞函数 
 			{
-				direction_a=getch();	//使用 getch 函数获取键盘输入 
+				direction_a=getch();	      //使用 getch 函数获取键盘输入 
 				limit();
 			}
 			panduan();
